@@ -1,4 +1,5 @@
 module Validators
+  # generate new validator each time used at the model
   def validate(attr, options)
     options.each do |option|
       validator = Object.const_get("#{option[0].capitalize}Validator")
@@ -6,6 +7,7 @@ module Validators
     end
   end
 
+  # initialize generators array
   def validators
     @validators ||= []
   end

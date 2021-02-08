@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :book do
     title { Faker::Book.title }
-    owner { Author }
+    owner { FactoryBot.build(:author) }
   end
 end
