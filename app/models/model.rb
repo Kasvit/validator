@@ -1,5 +1,5 @@
-require_relative "./concerns/validators"
-require_relative "./concerns/instance_methods"
+require "./lib/concerns/validators"
+require "./lib/concerns/instance_methods"
 
 class Model < OpenStruct
   extend Validators

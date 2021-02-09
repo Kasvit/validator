@@ -11,7 +11,7 @@ module InstanceMethods
 
   # check if valid? else raise an error
   def validate!
-    return if self.valid?
+    return true if self.valid?
 
     raise ValidationError, self.errors.join(", ")
   end
